@@ -1,68 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sajid Portfolio</title>
   <link rel="stylesheet" href="styles/portfolio-landingpage.css" />
 </head>
-<body>
 
-  <header>
-    <h1>Muhammad Sajid</h1>
-    <p>Your Vision, My Mission — Designer & Developer</p>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h2>Muhammad Sajid</h2>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    </div>
   </header>
 
-  <section class="hero">
+  <section id="about" class="hero">
     <img src="images/IMG_6295.jpg" alt="Profile Image" />
-    <h2>Passionate Creative Designer</h2>
-    <p>I specialize in transforming your ideas into stunning and functional digital experiences. Let’s create something amazing together.</p>
+    <h2>Passionate Software Engineer</h2>
+    <p>I'm a 3rd-year Software Engineering student with a passion for problem-solving, coding, and creativity. Let's
+      build impactful digital solutions together!</p>
   </section>
 
-  <section class="section">
+  <section id="expertise" class="section">
     <h3>My Expertise</h3>
     <div class="grid">
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Graphic Design">
-        <h4>Graphic Design</h4>
-        <p>Visual branding, logos, and marketing material design.</p>
+        <div class="icon-row">
+          <img src="images/html.svg">
+          <img src="images/css.svg">
+          <img src="images/javascript.svg">
+        </div>
+        <h4>Frontend Development</h4>
+        <p>Skilled in building responsive interfaces using HTML, CSS, JavaScript, and Tailwind CSS.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Web Design">
-        <h4>Web Design</h4>
-        <p>Modern, responsive websites that engage users.</p>
+        <div class="icon-row">
+          <img src="images/dsa.svg">
+        </div>
+        <h4>DSA</h4>
+        <p>Strong understanding of Data Structures and Algorithms for problem solving.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="UI/UX">
-        <h4>UI/UX Design</h4>
-        <p>Creating user-focused interfaces that feel great.</p>
+        <div class="icon-row">
+          <img src="images/C++.svg">
+          <img src="images/java.svg">
+        </div>
+        <h4>Core Java & C++</h4>
+        <p>Knowledge of core programming concepts and fundamentals in Java and C++.</p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Illustration">
-        <h4>Illustration</h4>
-        <p>Custom illustrations to enhance your digital identity.</p>
+        <div class="icon-row">
+          <img src="images/database.svg">
+        </div>
+        <h4>DBMS</h4>
+        <p>Experience in MySQL and managing relational databases with complex queries.</p>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section id="projects" class="section">
     <h3>Projects</h3>
     <div class="grid">
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 1">
-        <h4>Brand Identity</h4>
-        <p>Developed a modern visual identity for a fashion brand.</p>
+        <div class="icon-row">
+          <img src="images/rock-paper-scissors.svg" alt="Rock Paper Scissor Project">
+        </div>
+        <h4>Rock Paper Scissor</h4>
+        <p>Built an interactive browser game using HTML,CSS,JavaScript and DOM manipulation.
+          <br><a href="https://github.com/Muhammad-Sajid-Rajput/Rock-Paper-Scissor" target="_blank">View on GitHub</a>
+        </p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2">
-        <h4>Portfolio Website</h4>
-        <p>Built a dynamic portfolio with sleek animations.</p>
+        <div class="icon-row">
+          <img src="images/uniride.png" alt="Ride Sharing Website">
+        </div>
+        <h4>Ride Sharing Website</h4>
+        <p>A full-stack ride-sharing platform built with EJS, Node.js, MongoDB & Tailwind CSS.
+          <br><a href="https://github.com/Muhammad-Sajid-Rajput/Ride-sharing-website" target="_blank">View on GitHub</a>
+        </p>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 3">
-        <h4>Mobile UI Design</h4>
-        <p>Designed an intuitive and minimal mobile app interface.</p>
+        <div class="icon-row">
+          <img src="images/mysql.svg" alt="MySQL Databases">
+        </div>
+        <h4>MySQL Databases</h4>
+        <p>Designed and optimized databases using SQL.
+          <br><a href="https://github.com/Muhammad-Sajid-Rajput/sql-databases" target="_blank">View on GitHub</a>
+        </p>
       </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="hero">
+      <h3>Contact Me</h3>
+      <p>If you have any questions or opportunities, feel free to reach out:</p>
+      <a href="mailto:uniridecorperation2025@gmail.com" class="email-link">
+        uniridecorperation2025@gmail.com
+      </a>
     </div>
   </section>
 
@@ -70,5 +115,19 @@
     <p>&copy; 2025 Muhammad Sajid | All Rights Reserved</p>
   </footer>
 
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
+
 </html>
