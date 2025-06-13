@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sajid Portfolio</title>
-  <link rel="stylesheet" href="styles/portfolio-landingpage.css" />
+  <link rel="stylesheet" href="styles/portfolio-website.css" />
 </head>
 
 <body>
@@ -119,13 +119,6 @@
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
     });
   </script>
 </body>
