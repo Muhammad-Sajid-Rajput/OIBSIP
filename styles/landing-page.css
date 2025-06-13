@@ -1,34 +1,22 @@
-html {
-  box-sizing: border-box;
-  font-size: 20px;
-  line-height: 30px;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   margin: 0;
   background: #6d74fc;
-  color: #8A94A7;
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  box-sizing: inherit;
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .navbar {
-  background-color: #b5bed0;
+  background-color: whitesmoke;
 }
 
 .navbar .container {
@@ -74,7 +62,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: white;
+  color: #6d74fc;
 }
 
 .hero {
@@ -86,7 +74,7 @@ body {
 }
 
 .hero h2 {
-  font-size: 2.2em;
+  font-size: 2.1em;
   margin-top: 0;
   margin-bottom: 16px;
   font-weight: 600;
@@ -145,10 +133,10 @@ body {
 
 .feature-item {
   background-color: white;
-  padding: 19px;
+  padding: 17px;
   border-radius: 10px;
   color: black;
-  width: 180px;
+  width: auto;
   transition: transform 0.3s ease;
 }
 
@@ -180,29 +168,29 @@ body {
 .contact {
   padding: 10px 0;
   text-align: center;
-  background-color: white;
-  color: black;
+  background-color: #6d74fc;
+  color: white;
 }
 
 .contact p {
   margin-bottom: 10px;
   font-size: 1.1rem;
-  color: #8A94A7;
+  color: white;
 }
 
 .email-link {
-  color: black;
+  color: white;
   text-decoration: underline;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .email-link:hover {
-  color: #6d74fc;
+  color: black;
 }
 
 .footer {
-  background-color: #b5bed0;
+  background-color: whitesmoke;
   color: black;
   text-align: center;
   font-size: 15px;
