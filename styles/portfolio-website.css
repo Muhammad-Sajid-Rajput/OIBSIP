@@ -1,7 +1,7 @@
 :root {
-  --bg: #000000;
-  --primary: #CF0F47;
-  --secondary: #FF0B55;
+  --bg: #1a1a1a;
+  --primary: #4143eb;
+  --secondary: #4bc9ff;
   --light: #FFDEDE;
 }
 
@@ -18,7 +18,7 @@ body.light-theme header {
 }
 
 body.light-theme header h2 {
-  color: var(--light);
+  color: #ffffff;
 }
 
 body.light-theme {
@@ -30,6 +30,11 @@ body.light-theme h2,
 body.light-theme h3,
 body.light-theme h4 {
   color: var(--secondary);
+}
+
+body.light-theme .card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary);
 }
 
 body.light-theme p,
@@ -48,6 +53,11 @@ body.light-theme .nav-links a {
   color: var(--light);
 }
 
+body.light-theme .nav-links a:hover {
+  color: #ffffff;
+  transform: scale(1.3);
+}
+
 body.light-theme footer {
   background: var(--secondary);
   color: #fff;
@@ -62,6 +72,10 @@ body.light-theme footer {
 header {
   background-color: var(--primary);
   padding: 1.5rem 2rem;
+}
+
+header h2 {
+  color: #ffffff;
 }
 
 .container {
@@ -140,7 +154,7 @@ header {
 .section h3 {
   text-align: center;
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--secondary);
   margin-bottom: 2rem;
 }
 

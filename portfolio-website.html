@@ -20,7 +20,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">🌓</button>
     </div>
   </header>
 
@@ -95,7 +95,6 @@
         </div>
         <h4>MySQL Databases</h4>
         <p>Designed and optimized databases using SQL.
-          <br><a href="https://github.com/Muhammad-Sajid-Rajput/sql-databases" target="_blank">View on GitHub</a>
         </p>
       </div>
     </div>
@@ -105,8 +104,8 @@
     <div class="hero">
       <h3>Contact Me</h3>
       <p>If you have any questions or opportunities, feel free to reach out:</p>
-      <a href="mailto:uniridecorperation2025@gmail.com" class="email-link">
-        uniridecorperation2025@gmail.com
+      <a href="mailto:muhammadsajidrajput20@gmail.com" class="email-link">
+        muhammadsajidrajput20@gmail.com
       </a>
     </div>
   </section>
@@ -116,10 +115,12 @@
   </footer>
 
   <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
-    });
+   
+    const toggleBtn = document.querySelector('.theme-toggle');
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+      });
+    
   </script>
 </body>
 
