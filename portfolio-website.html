@@ -14,23 +14,56 @@
       <h2>Muhammad Sajid</h2>
       <nav>
         <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#expertise">Expertise</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+      <button class="theme-toggle toggle-button" id="theme-toggle" aria-label="Toggle Theme">
+        <iconify-icon icon="emojione:sun" width="40" height="40"></iconify-icon>
+      </button>
     </div>
   </header>
 
-  <section id="about" class="hero">
+  <section id="home" class="hero">
     <img src="images/IMG_6295.jpg" alt="Profile Image" />
-    <h2>Passionate Software Engineer</h2>
-    <p>I'm a 3rd-year Software Engineering student with a passion for problem-solving, coding, and creativity. Let's
-      build impactful digital solutions together!</p>
-      <br><a href="https://github.com/Muhammad-Sajid-Rajput" target="_blank">View My GitHub Profile</a>
+    <h2>Muhammad Sajid Rajput</h2>
+    <p><strong>Solving complex problems with elegant digital solutions</strong></p>
+    <br>
+    <div class="icon">
+      <a href="https://www.linkedin.com/in/muhammad-sajid-066248264/" target="_blank">
+        <iconify-icon icon="cib:linkedin" width="32" height="32"></iconify-icon>
+      </a>
+      <a href="https://github.com/Muhammad-Sajid-Rajput" target="_blank">
+        <iconify-icon icon="fa-brands:github-square" width="36" height="37"></iconify-icon>
+      </a>
+    </div>
+    <div class="icon">
+      <a href="#about">
+        <iconify-icon icon="tdesign:arrow-down" width="34" height="34"></iconify-icon>
+      </a>
+    </div>
   </section>
+  <section id="about" class="section">
+  <h3>About Me</h3>
+  <div class="hero">
+    <h4>Hey! I'm Muhammad Sajid Rajput</h4>
+    <p>
+      I'm a <strong>Frontend Developer</strong> passionate about building clean, responsive, and user-centered web interfaces. I specialize in
+      <strong>JavaScript</strong>, <strong>React</strong>, <strong>EJS</strong>, and modern styling frameworks like <strong>Tailwind CSS</strong> to create fast, accessible, and visually engaging websites.
+    </p>
+    <br />
+    <p>
+      I love transforming ideas into interactive designs, ensuring every detail—from layout to animation—enhances the user experience. Whether building from scratch or refining an existing interface, I focus on performance, accessibility, and code clarity.
+    </p>
+    <br />
+    <p>
+      Constantly learning and evolving, I thrive on designing functional, elegant frontends that leave a lasting impact.
+    </p>
+  </div>
+</section>
 
   <section id="expertise" class="section">
     <h3>My Expertise</h3>
@@ -77,7 +110,7 @@
           <img src="images/rock-paper-scissors.svg" alt="Rock Paper Scissor Project">
         </div>
         <h4>Rock Paper Scissor</h4>
-        <p>Built an interactive browser game using HTML,CSS,JavaScript and DOM manipulation.
+        <p>Built an interactive browser game using HTML, CSS, JavaScript, and DOM manipulation.
           <br><a href="https://github.com/Muhammad-Sajid-Rajput/Rock-Paper-Scissor" target="_blank">View on GitHub</a>
         </p>
       </div>
@@ -95,8 +128,7 @@
           <img src="images/mysql.svg" alt="MySQL Databases">
         </div>
         <h4>MySQL Databases</h4>
-        <p>Designed and optimized databases using SQL.
-        </p>
+        <p>Designed and optimized databases using SQL.</p>
       </div>
     </div>
   </section>
@@ -115,11 +147,18 @@
     <p>&copy; 2025 Muhammad Sajid | All Rights Reserved</p>
   </footer>
 
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   <script>
-
     const toggleBtn = document.querySelector('.theme-toggle');
+
     toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
+      const body = document.body;
+      const isDark = body.classList.toggle('dark-theme');
+
+      // Toggle icon
+      toggleBtn.innerHTML = isDark
+        ? '<iconify-icon icon="emojione:crescent-moon" width="40" height="40"></iconify-icon>'
+        : '<iconify-icon icon="emojione:sun" width="40" height="40"></iconify-icon>';
     });
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -133,15 +172,11 @@
           }
         });
       }, {
-        threshold: 0.2 
+        threshold: 0.2
       });
 
-      cards.forEach(card => {
-        observer.observe(card);
-      });
+      cards.forEach(card => observer.observe(card));
     });
-
-
   </script>
 </body>
 
