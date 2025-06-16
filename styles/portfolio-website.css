@@ -32,6 +32,11 @@ body.light-theme h4 {
   color: var(--secondary);
 }
 
+body.light-theme .hero a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 body.light-theme .card:hover {
   transform: translateY(-8px);
   border-color: var(--secondary);
@@ -47,6 +52,11 @@ body.light-theme .hero p {
 body.light-theme .card {
   background-color: #f3f3f3;
   border-color: var(--primary);
+}
+
+body.light-theme .card a {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 body.light-theme .nav-links a {
@@ -165,11 +175,20 @@ header h2 {
 }
 
 .card {
+
   background: #111;
   padding: 1.5rem;
   border: 2px solid var(--primary);
   border-radius: 10px;
   transition: transform 0.3s, border-color 0.3s;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.card.visible {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .card:hover {
@@ -194,6 +213,11 @@ header h2 {
 
 .card p {
   color: #ccc;
+}
+
+.card a {
+  color: #FFDEDE;
+  text-decoration: underline;
 }
 
 footer {

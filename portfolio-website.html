@@ -29,6 +29,7 @@
     <h2>Passionate Software Engineer</h2>
     <p>I'm a 3rd-year Software Engineering student with a passion for problem-solving, coding, and creativity. Let's
       build impactful digital solutions together!</p>
+      <br><a href="https://github.com/Muhammad-Sajid-Rajput" target="_blank">View My GitHub Profile</a>
   </section>
 
   <section id="expertise" class="section">
@@ -115,12 +116,32 @@
   </footer>
 
   <script>
-   
+
     const toggleBtn = document.querySelector('.theme-toggle');
-      toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('light-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".card");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2 
       });
-    
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+
+
   </script>
 </body>
 
