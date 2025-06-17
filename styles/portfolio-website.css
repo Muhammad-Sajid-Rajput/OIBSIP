@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: #e8e8e8;
   --primary: #4143eb;
@@ -49,6 +53,20 @@ body.dark-theme .hero .icon a:hover {
 }
 
 body.dark-theme .card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary);
+}
+
+body.dark-theme .skill-box {
+  background-color: #111;
+  border-color: var(--primary);
+}
+
+body.dark-theme .skill-box span {
+  color: #FFDEDE;
+}
+
+body.dark-theme .skill-box:hover {
   transform: translateY(-8px);
   border-color: var(--secondary);
 }
@@ -185,11 +203,9 @@ header h2 {
 .hero .icon a:hover {
   transform: scale(1.2);
 }
-.arrow-down {
-  text-align: center;
-  margin-top: 1rem;
-}
+
 .section {
+  scroll-margin-top: 100px;
   padding: 3rem 2rem;
 }
 
@@ -199,6 +215,7 @@ header h2 {
   color: var(--secondary);
   margin-bottom: 2rem;
 }
+
 .section p {
   max-width: 800px;
   margin: 0 auto;
@@ -209,7 +226,7 @@ header h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
 }
 
@@ -218,9 +235,8 @@ header h2 {
   padding: 1.5rem;
   border: 2px solid var(--primary);
   border-radius: 10px;
-  transition: transform 0.3s, border-color 0.3s;
   transform: translateY(50px);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, border-color 0.3s;
   opacity: 0;
 }
 
@@ -278,14 +294,31 @@ footer {
   }
 }
 
-.icon-row {
+
+.skill-box {
+  background: #f3f3f3;
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 10px;
   display: flex;
+  align-items: center;
+  gap: 12px;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 1rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.icon-row img {
-  max-width: 70px;
-  max-height: 80px;
+.skill-box:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary);
+}
+
+.skill-box span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--light);
+}
+
+.iconify {
+  width: 32px;
+  height: 32px;
 }
