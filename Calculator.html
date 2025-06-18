@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/Calculator.css" />
+  <title>Calculator</title>
+</head>
+
+<body>
+  <h1 style="font-size: 50px;">Calculator</h1>
+
+  <div class="calculator-container">
+    <div class="calculation-display" id="display">0</div>
+
+    <div class="calculator">
+      <button class="button js-button">(</button>
+      <button class="button js-button">)</button>
+      <button class="button js-button" data-action="ans">ans</button>
+      <button class="button js-button" data-action="del">⌫</button>
+
+      <button class="button js-button">7</button>
+      <button class="button js-button">8</button>
+      <button class="button js-button">9</button>
+      <button class="button js-button operator">%</button>
+
+      <button class="button js-button">4</button>
+      <button class="button js-button">5</button>
+      <button class="button js-button">6</button>
+      <button class="button js-button operator">√</button>
+
+      <button class="button js-button">1</button>
+      <button class="button js-button">2</button>
+      <button class="button js-button">3</button>
+      <button class="button js-button operator">×</button>
+
+      <button class="button js-button">0</button>
+      <button class="button js-button">.</button>
+      <button class="button js-button operator">÷</button>
+      <button class="button js-button operator">+</button>
+
+      <button class="button js-button operator">-</button>
+      <button class="button js-button equal " data-action="enter">=</button>
+      <button class="button js-button clear " data-action="clear">AC</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+  <script src="scripts/Calculator.js"></script>
+</body>
+
+</html>

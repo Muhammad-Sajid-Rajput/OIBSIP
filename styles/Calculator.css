@@ -1,0 +1,125 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.3);
+  width: fit-content;
+}
+
+.calculation-display {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 25px;
+  text-align: right;
+  width: 330px;
+  height: 80px;
+  padding: 20px 15px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: font-size 0.2s ease;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-gap: 12px;
+}
+
+.button {
+  height: 75px;
+  width: 75px;
+  font-size: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: all 0.2s ease;
+  user-select: none;
+  outline: none;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:hover {
+  background-color: #444;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.button.operator {
+  background-color: #ff9500;
+  color: white;
+  font-weight: bold;
+}
+
+.button.operator:hover {
+  background-color: #ffaa33;
+}
+
+.button.equal {
+  background-color: #ff9500;
+  font-weight: bold;
+}
+
+.button.button.equal:hover {
+  background-color: #ffaa33;
+}
+
+.button.clear {
+  width: 100%;
+  border-radius: 40px;
+  background-color: #a5a5a5;
+  font-size: 24px;
+  color: black;
+}
+
+.button.clear:hover {
+  background-color: #cbcbcb;
+}
+
+.button[data-action="del"] {
+  font-size: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .calculator-container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .calculation-display {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .calculator {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+
+  .button {
+    height: 60px;
+    font-size: 24px;
+  }
+}
