@@ -11,7 +11,11 @@
 <body>
   <header class="navbar">
     <div class="container">
-      <h2>Muhammad Sajid</h2>
+      <div class="brand">
+        <iconify-icon icon="tdesign:code" width="32" height="32" style="color: #ffffff"></iconify-icon>
+        <h2>Muhammad Sajid</h2>
+      </div>
+      
       <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -21,10 +25,12 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
       <button class="theme-toggle toggle-button" id="theme-toggle" aria-label="Toggle Theme">
-        <iconify-icon icon="emojione:sun"></iconify-icon>
+      <iconify-icon icon="emojione:crescent-moon"></iconify-icon>
       </button>
     </div>
+
   </header>
 
   <section id="home" class="hero">
@@ -48,8 +54,8 @@
   </section>
   <section id="about" class="section">
     <div class="hero">
-      <h3>About Me</h3>
-      <h4>Hey! I'm Muhammad Sajid Rajput</h4>
+      <h2>About Me</h2>
+      <h3>Hey! I'm Muhammad Sajid Rajput</h3>
       <p>
         I'm a <strong>Frontend Developer</strong> passionate about building clean, responsive, and user-centered web
         interfaces. I specialize in
@@ -74,7 +80,9 @@
   </section>
 
   <section id="expertise" class="section">
-    <h3>My Expertise</h3>
+    <div class="hero">
+      <h2>My Expertise</h2>
+    </div>
     <div class="grid">
       <div class="skill-box">
         <iconify-icon icon="devicon:html5"></iconify-icon>
@@ -112,27 +120,39 @@
 
 
   <section id="projects" class="section">
-    <h3>Projects</h3>
+    <div class="hero">
+      <h2>Projects</h2>
+    </div>
     <div class="grid">
+
       <div class="card">
         <img src="images/rock-paper-scissors.svg" alt="Rock Paper Scissor Project">
         <h4>Rock Paper Scissor</h4>
-        <p>Built an interactive browser game using HTML, CSS, JavaScript, and DOM manipulation.
+        <p>An interactive browser-based game built with HTML, CSS, and JavaScript. Features real-time gameplay using DOM
+          manipulation, dynamic score tracking, and user-friendly animations.
           <br><a href="https://github.com/Muhammad-Sajid-Rajput/Rock-Paper-Scissor" target="_blank">View on GitHub</a>
         </p>
       </div>
+
       <div class="card">
         <img src="images/uniride.png" alt="Ride Sharing Website">
         <h4>Ride Sharing Website</h4>
-        <p>A full-stack ride-sharing platform built with EJS, Node.js, MongoDB & Tailwind CSS.
+        <p>Uni Ride is a full-stack ride-sharing platform designed for university students. Developed using EJS,
+          Node.js, MongoDB, and Tailwind CSS. Features include ride listings, booking, user authentication, and a clean
+          responsive UI.
           <br><a href="https://github.com/Muhammad-Sajid-Rajput/Ride-sharing-website" target="_blank">View on GitHub</a>
         </p>
       </div>
+
       <div class="card">
-        <img src="images/mysql.svg" alt="MySQL Databases">
-        <h4>MySQL Databases</h4>
-        <p>Designed and optimized databases using SQL.</p>
+        <img src="images/calculator.png" alt="Calculator Project">
+        <h4>Calculator</h4>
+        <p>A responsive calculator web app with support for parentheses, percentage, square root, and keyboard
+          shortcuts. Built using HTML, CSS, JavaScript & Math.js.
+          <br><a href="https://github.com/Muhammad-Sajid-Rajput/Calculator" target="_blank">View on GitHub</a>
+        </p>
       </div>
+
     </div>
   </section>
 
@@ -146,21 +166,21 @@
           <iconify-icon icon="mdi:email-outline"></iconify-icon>
           <div class="info-content">
             <span class="info-label">Email</span>
-            <a href="mailto:sajidrajp5@gmail.com" class="info-value">sajidrajp5@gmail.com</a>
+            <a href="mailto:sajidrajp5@gmail.com">sajidrajp5@gmail.com</a>
           </div>
         </div>
         <div class="info-item">
           <iconify-icon icon="mdi:phone-outline"></iconify-icon>
           <div class="info-content">
             <span class="info-label">Phone</span>
-            <span class="info-value">+92 345 3696819</span>
+            <span>+92 345 3696819</span>
           </div>
         </div>
         <div class="info-item">
           <iconify-icon icon="mdi:map-marker-outline"></iconify-icon>
           <div class="info-content">
             <span class="info-label">Location</span>
-            <span class="info-value">Hyderabad Sindh, Pakistan</span>
+            <span>Hyderabad Sindh, Pakistan</span>
           </div>
         </div>
       </div>

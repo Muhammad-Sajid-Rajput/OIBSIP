@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (shouldUseDark) {
         body.classList.add('dark-theme');
-        toggleBtn.innerHTML = '<iconify-icon icon="emojione:crescent-moon"></iconify-icon>';
-    } else {
         toggleBtn.innerHTML = '<iconify-icon icon="emojione:sun"></iconify-icon>';
+    } else {
+        toggleBtn.innerHTML = '<iconify-icon icon="emojione:crescent-moon"></iconify-icon>';
     }
 
     toggleBtn.addEventListener('click', () => {
         const isDark = body.classList.toggle('dark-theme');
         toggleBtn.innerHTML = isDark
-            ? '<iconify-icon icon="emojione:crescent-moon"></iconify-icon>'
-            : '<iconify-icon icon="emojione:sun"></iconify-icon>';
+            ? '<iconify-icon icon="emojione:sun"></iconify-icon>'
+            : '<iconify-icon icon="emojione:crescent-moon"></iconify-icon>';
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 
