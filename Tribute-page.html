@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Dinklage: A Tribute</title>
+    <link rel="stylesheet" href="styles/Tribute-page.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Peter Dinklage: A Tribute</h1>
+            <a href="#" class="read-more">READ MORE</a>
+        </header>
+
+        <div class="timeline">
+            <div class="timeline-years">
+                <div class="year">
+                    <h2>1969</h2>
+                    <p>Born in Morristown, New Jersey</p>
+                </div>
+                <div class="year">
+                    <h2>1991</h2>
+                    <p>Graduated from Bennington College</p>
+                </div>
+                <div class="year">
+                    <h2>2003</h2>
+                    <p>Breakthrough in <em>The Station Agent</em></p>
+                </div>
+                <div class="year">
+                    <h2>2011-2019</h2>
+                    <p>Iconic role as Tyrion Lannister</p>
+                </div>
+                <div class="year">
+                    <h2>2021</h2>
+                    <p>Starred in <em>Cyrano</em></p>
+                </div>
+            </div>
+
+            <div class="timeline-content">
+                <div class="bio">
+                    <div class="image-placeholder">
+                        <img src="images/Peter Dinklage.jpeg" alt="Peter Dinklage Image">
+                    </div>
+                    <h3>Peter Dinklage</h3>
+                    <p>Peter Hayden Dinklage is an American actor born with <strong>achondroplasia</strong>, a common
+                        form of dwarfism. He has become one of the most respected actors of his generation, known for
+                        his powerful performances and advocacy for equal representation.</p>
+                    <p>Dinklage changed how the world views disability in Hollywood. He brought complexity,
+                        vulnerability, and humor to his roles — redefining what it means to be a leading man.</p>
+                </div>
+
+                <div class="event">
+                    <h3>🎬 Early Life</h3>
+                    <ul>
+                        <li><strong>Full Name:</strong> Peter Hayden Dinklage</li>
+                        <li><strong>Date of Birth:</strong> June 11, 1969</li>
+                        <li><strong>Birthplace:</strong> Morristown, New Jersey, USA</li>
+                        <li><strong>Condition:</strong> Born with achondroplasia, a common form of dwarfism.</li>
+                    </ul>
+                    <p>Peter grew up in a supportive family and developed an early interest in acting. He graduated from
+                        Bennington College in 1991 with a degree in drama.</p>
+                </div>
+
+                <div class="event">
+                    <h3>🌟 Career Highlights</h3>
+                    <ul>
+                        <li><strong>Breakthrough Role:</strong> <em>The Station Agent</em> (2003)</li>
+                        <li><strong>Iconic Role:</strong> <em>Tyrion Lannister</em> in HBO's <em>Game of Thrones</em>
+                            (2011–2019)
+                            <ul>
+                                <li>Won <strong>4 Primetime Emmy Awards</strong></li>
+                                <li>Known for his wit, intelligence, and emotional depth</li>
+                            </ul>
+                        </li>
+                        <li><strong>Other Notable Films:</strong>
+                            <ul>
+                                <li><em>Elf</em> (2003)</li>
+                                <li><em>X-Men: Days of Future Past</em> (2014)</li>
+                                <li><em>Three Billboards Outside Ebbing, Missouri</em> (2017)</li>
+                                <li><em>Cyrano</em> (2021)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="event">
+                    <h3>🏆 Awards and Recognition</h3>
+                    <ul>
+                        <li><strong>Emmy Awards:</strong> 4 wins for Outstanding Supporting Actor in a Drama Series</li>
+                        <li><strong>Golden Globe:</strong> 1 win</li>
+                        <li><strong>Screen Actors Guild Awards:</strong> Multiple nominations</li>
+                    </ul>
+                    <p>Critically Acclaimed Actor with a powerful presence and commitment to roles, regardless of size
+                        or genre.</p>
+                </div>
+
+                <div class="event">
+                    <h3>💬 Advocacy and Impact</h3>
+                    <p>Peter Dinklage is a vocal advocate for:</p>
+                    <ul>
+                        <li><strong>Equal representation of people with dwarfism</strong> in media</li>
+                        <li><strong>Animal rights</strong> — he's a vegetarian and supports PETA</li>
+                        <li><strong>Authenticity in casting</strong> — promoting deeper, non-stereotypical roles</li>
+                    </ul>
+
+                    <div class="quote">
+                        <p>"I hate that word—'lucky.' It cheapens a lot of hard work."</p>
+                        <p>— Peter Dinklage</p>
+                    </div>
+
+                    <div class="quote">
+                        <p>"There are brilliant actors with dwarfism, and when they're put in a box and only cast as
+                            elves or something, that's frustrating."</p>
+                        <p>— Peter Dinklage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created as a tribute to Peter Dinklage's remarkable career and impact</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('.read-more').addEventListener('click', e => {
+            e.preventDefault();
+            window.open('https://www.imdb.com/name/nm0227759/', '_blank');
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        entry.target.style.transform = 'scale(1)';
+                    }, 300);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.year').forEach(year => {
+            observer.observe(year);
+        });
+    </script>
+</body>
+
+</html>
