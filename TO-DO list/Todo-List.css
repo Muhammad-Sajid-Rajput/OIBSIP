@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.form-section {
+  flex: 0 0 40%;
+  max-width: 38%;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+.todo-section {
+  flex: 1;
+  max-height: 70vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+textarea {
+  height: 70px;
+  resize: none;
+}
+
+.save-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #219150;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: #dfe6e9;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.todo-container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fefefe;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-left: 6px solid #3498db;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.todo-container > div:hover {
+  transform: translateX(5px);
+}
+
+.todo-container span {
+  flex: 1;
+  margin: 0 6px;
+}
+
+.todo-container button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-container button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-section, .todo-section {
+    flex: 1 1 100%;
+  }
+}
