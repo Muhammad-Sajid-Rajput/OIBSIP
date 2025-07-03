@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register Form</title>
+  <link rel="stylesheet" href="Login-form.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-box" id="formBox">
+
+      <div class="toggle-box">
+        <button id="loginToggle" class="active" aria-selected="true">Login</button>
+        <button id="registerToggle" aria-selected="false">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="form active" autocomplete="on">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required autocomplete="email" />
+        <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password" />
+        <a href="#" class="forgot" id="showReset">Forgot password?</a>
+        <label><input type="checkbox" id="rememberMe" /> Remember Me</label>
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Forgot Password Form -->
+      <form id="forgotPasswordForm" class="form">
+        <h2>Forgot Password</h2>
+        <input type="email" id="forgotEmail" placeholder="Enter your email" required />
+        <button type="submit">Send Reset Link</button>
+        <a href="#" id="backToLoginFromForgot" class="back-link">Back to Login</a>
+      </form>
+
+      <!-- Reset Password Form -->
+      <form id="resetForm" class="form" autocomplete="on" style="display:none;">
+        <h2>Reset Password</h2>
+        <input type="email" id="resetEmail" placeholder="Email" required autocomplete="email" />
+        <input type="password" id="resetNewPassword" placeholder="New Password (min 6 chars)" required autocomplete="new-password" />
+        <button type="submit">Reset Password</button>
+        <a href="#" id="backToLogin" class="back-link">Back to Login</a>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="form" autocomplete="on">
+        <h2>Register</h2>
+        <input type="text" id="registerName" placeholder="Full Name" required autocomplete="name" />
+        <input type="email" id="registerEmail" placeholder="Email" required autocomplete="email" />
+        <input type="password" id="registerPassword" placeholder="Password (min 6 chars)" required autocomplete="new-password" />
+        <button type="submit">Register</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="Login-form.js"></script>
+</body>
+
+</html>
