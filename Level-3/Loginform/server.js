@@ -97,7 +97,7 @@ app.post('/api/forgot-password', (req, res) => {
     html: `
       <p>Hello ${user.name},</p>
       <p>Click the link below to reset your password. This link is valid for 30 minutes:</p>
-      <a href="${resetLink}">${resetLink}</a>
+      <button><a target="_blank" href="${resetLink}">Reset Password</a></button>
       <p>If you did not request this, please ignore this email.</p>
     `
   };
